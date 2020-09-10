@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Produit" table="produit" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idProduit" type="java.lang.Integer">
+            <column name="id_produit" />
+            <generator class="identity" />
+        </id>
+        <property name="idObjet" type="int">
+            <column name="id_objet" not-null="true" />
+        </property>
+        <property name="matricule" type="string">
+            <column name="matricule" length="250" not-null="true" />
+        </property>
+        <property name="typeProduit" type="string">
+            <column name="type_produit" length="100" not-null="true" />
+        </property>
+        <property name="marque" type="string">
+            <column name="marque" length="250" not-null="true" />
+        </property>
+        <property name="modele" type="string">
+            <column name="modele" length="250" not-null="true" />
+        </property>
+        <property name="designation" type="string">
+            <column name="designation" length="250" not-null="true" />
+        </property>
+        <property name="nomProduit" type="string">
+            <column name="nom_produit" length="250" not-null="true" />
+        </property>
+        <property name="unite" type="string">
+            <column name="unite" length="250" not-null="true" />
+        </property>
+        <property name="quantite" type="double">
+            <column name="quantite" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="utilise" type="double">
+            <column name="utilise" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="prix" type="double">
+            <column name="prix" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="image" type="string">
+            <column name="image" length="65535" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

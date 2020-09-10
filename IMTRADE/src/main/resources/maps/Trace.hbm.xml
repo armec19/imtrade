@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Trace" table="trace" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idTrace" type="java.lang.Integer">
+            <column name="id_trace" />
+            <generator class="identity" />
+        </id>
+        <property name="idUtilisateur" type="int">
+            <column name="id_utilisateur" not-null="true" />
+        </property>
+        <property name="date" type="string">
+            <column name="date" length="20" not-null="true" />
+        </property>
+        <property name="operation" type="string">
+            <column name="operation" length="250" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

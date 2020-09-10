@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Document" table="document" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idDocument" type="java.lang.Integer">
+            <column name="id_document" />
+            <generator class="identity" />
+        </id>
+        <property name="idStandard" type="string">
+            <column name="id_standard" length="250" not-null="true">
+                <comment>code final du document</comment>
+            </column>
+        </property>
+        <property name="idStructure" type="int">
+            <column name="id_structure" not-null="true" />
+        </property>
+        <property name="idStructureDetais" type="int">
+            <column name="id_structure_detais" not-null="true" />
+        </property>
+        <property name="idTypeDoc" type="int">
+            <column name="id_typeDoc" not-null="true" />
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="50" not-null="true">
+                <comment>code final: Nstandard+date+type+structure+personneN</comment>
+            </column>
+        </property>
+        <property name="idProjet" type="int">
+            <column name="id_projet" not-null="true" />
+        </property>
+        <property name="idNature" type="int">
+            <column name="id_nature" not-null="true" />
+        </property>
+        <property name="idDesignation" type="int">
+            <column name="id_designation" not-null="true" />
+        </property>
+        <property name="idType" type="int">
+            <column name="id_type" not-null="true" />
+        </property>
+        <property name="idDestinataire" type="int">
+            <column name="id_destinataire" not-null="true" />
+        </property>
+        <property name="NRef" type="string">
+            <column name="n_ref" length="250" not-null="true" />
+        </property>
+        <property name="NAgrement" type="string">
+            <column name="n_agrement" length="250" not-null="true" />
+        </property>
+        <property name="dateCreation" type="string">
+            <column name="date_creation" length="30" not-null="true" />
+        </property>
+        <property name="dateEcheance" type="string">
+            <column name="date_echeance" length="30" not-null="true" />
+        </property>
+        <property name="dateValidation" type="string">
+            <column name="date_validation" length="30" not-null="true" />
+        </property>
+        <property name="dateArchivage" type="string">
+            <column name="date_archivage" length="30" not-null="true" />
+        </property>
+        <property name="commentaire" type="string">
+            <column name="commentaire" length="65535" not-null="true" />
+        </property>
+        <property name="link" type="string">
+            <column name="link" length="65535" not-null="true" />
+        </property>
+        <property name="documentEtat" type="string">
+            <column name="document_etat" length="200" not-null="true">
+                <comment>templated/created/validated/confirmed</comment>
+            </column>
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

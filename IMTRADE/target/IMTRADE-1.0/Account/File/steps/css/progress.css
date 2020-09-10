@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+
+.pbar {
+    width: 100%;
+    height: 10px;
+    border-radius: 0px;
+    border: solid 1px #93d2ff;
+    /* #93d2ff*/
+    height: 13px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+}
+.pourcent{
+    padding-right:20px;
+    padding-left:10px;
+}
+
+.progress_details{
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.ui-progressbar {
+    position: relative;
+    height: 15px;
+    position: relative;
+    width: 100%;
+    height: 10px;
+    border-radius: 0px;
+    border: solid 1px #93d2ff;
+    height: 13px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.progress-label {
+    position: absolute;
+    font-size: 10px;
+    left: 1%;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+}
+.ui-progressbar-value {
+    width: 0px;
+    background-color: #09f;
+    height: 10px;
+    transition: width 2s;
+    height: 13px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(left, #09f 95%, #fff 105%, #fff 105%);
+}
+
+
+#status1,#status2,#status3 {
+    margin-bottom: 1em;
+}
+.status {
+    background: #fff;
+    margin-bottom: .25em;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.status {
+    position: relative;
+    height: 1em;
+    font-size: 15px;
+    line-height: 1em;
+    padding: .5em;
+    padding-left: 2em;
+    transition: color 500ms;
+}
+.status:before, .status:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    transition: all 500ms;
+}
+.status.-pending {
+    color: #666;  
+}
+.status.-pending:before, .status.-pending:after {
+    background: #888;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.status.-pending:before {
+    width: .25em;
+    height: .25em;
+    top: .5em;
+    left: .875em;
+    border-radius: .125em;
+    transform-origin: 50% .5em;
+}
+.status.-pending:after {
+    width: .25em;
+    height: .25em;
+    top: 1.25em;
+    left: .875em;
+    border-radius: .125em;
+    transform-origin: 50% -.25em;
+}
+.status.-success {
+    color: #368;
+}
+.status.-success:before, .status.-success:after {
+    background: #6cf;
+    border-radius: .125em;
+}
+.status.-success:before {
+    width: .25em;
+    height: 1em;
+    top: .5em;
+    left: .875em;
+    transform-origin: 50% .875em;
+    transform: translate(-.177em, -.11em) rotate(.125turn);
+}
+.status.-success:after {
+    width: .25em;
+    height: .5em;
+    top: 1em;
+    left: .875em;
+    transform-origin: 50% .375em;
+    transform: translate(-.177em, -.11em) rotate(-.125turn);
+}
+.status.-failure {
+    color: #802;
+}
+.status.-failure:before, .status.-failure:after {
+    background: #f04;
+    border-radius: .125em;
+}
+.status.-failure:before {
+    width: .25em;
+    height: 1em;
+    top: .5em;
+    left: .875em;
+    transform: rotate(.125turn);
+}
+.status.-failure:after {
+    width: .25em;
+    height: 1em;
+    top: .5em;
+    left: .875em;
+    transform: rotate(-.125turn);
+}

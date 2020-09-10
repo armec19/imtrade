@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Objet" table="objet" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idObjet" type="java.lang.Integer">
+            <column name="id_objet" />
+            <generator class="identity" />
+        </id>
+        <property name="typeObjet" type="int">
+            <column name="type_objet" not-null="true">
+                <comment>consommable/equipement/...</comment>
+            </column>
+        </property>
+        <property name="nomObjet" type="string">
+            <column name="nom_objet" length="65535" not-null="true" />
+        </property>
+        <property name="pu" type="double">
+            <column name="pu" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="idStructure" type="java.lang.Integer">
+            <column name="id_structure" />
+        </property>
+        <property name="idProjet" type="java.lang.Integer">
+            <column name="id_projet" />
+        </property>
+        <property name="idNature" type="java.lang.Integer">
+            <column name="id_nature" />
+        </property>
+        <property name="idDesignationNature" type="java.lang.Integer">
+            <column name="id_designation_nature" />
+        </property>
+        <property name="idTypeNature" type="java.lang.Integer">
+            <column name="id_type_nature" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

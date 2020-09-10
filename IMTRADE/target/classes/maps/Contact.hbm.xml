@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Contact" table="contact" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idContact" type="java.lang.Integer">
+            <column name="id_contact" />
+            <generator class="identity" />
+        </id>
+        <property name="idUtilisateur" type="int">
+            <column name="id_utilisateur" not-null="true" />
+        </property>
+        <property name="contenu" type="string">
+            <column name="contenu" not-null="true" />
+        </property>
+        <property name="temps" type="string">
+            <column name="temps" length="100" not-null="true" />
+        </property>
+        <property name="vu" type="int">
+            <column name="vu" not-null="true" />
+        </property>
+        <property name="tempsVu" type="string">
+            <column name="temps_vu" length="30" />
+        </property>
+        <property name="idReponse" type="java.lang.Integer">
+            <column name="id_reponse" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

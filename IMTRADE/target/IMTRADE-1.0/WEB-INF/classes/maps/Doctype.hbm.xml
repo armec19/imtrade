@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Doctype" table="doctype" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idDoctype" type="java.lang.Integer">
+            <column name="id_doctype" />
+            <generator class="identity" />
+        </id>
+        <property name="nomDocument" type="string">
+            <column name="nom_document" length="250" not-null="true" />
+        </property>
+        <property name="abbrev" type="string">
+            <column name="abbrev" length="50" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

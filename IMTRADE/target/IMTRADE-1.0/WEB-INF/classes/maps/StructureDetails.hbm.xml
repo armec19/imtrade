@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.StructureDetails" table="structure_details" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idStructureDetais" type="java.lang.Integer">
+            <column name="id_structure_detais" />
+            <generator class="identity" />
+        </id>
+        <property name="idStructure" type="int">
+            <column name="id_structure" not-null="true" />
+        </property>
+        <property name="capital" type="string">
+            <column name="capital" length="250" not-null="true" />
+        </property>
+        <property name="adresse" type="string">
+            <column name="adresse" length="65535" not-null="true" />
+        </property>
+        <property name="rc" type="string">
+            <column name="rc" length="250" not-null="true" />
+        </property>
+        <property name="nif" type="string">
+            <column name="nif" length="250" not-null="true" />
+        </property>
+        <property name="nis" type="string">
+            <column name="nis" length="250" not-null="true" />
+        </property>
+        <property name="art" type="string">
+            <column name="art" length="250" not-null="true" />
+        </property>
+        <property name="rib" type="string">
+            <column name="rib" length="250" not-null="true" />
+        </property>
+        <property name="banque" type="string">
+            <column name="banque" length="250" not-null="true" />
+        </property>
+        <property name="site" type="string">
+            <column name="site" length="250" not-null="true" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="65535" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

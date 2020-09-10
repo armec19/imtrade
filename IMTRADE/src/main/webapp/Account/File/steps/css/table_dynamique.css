@@ -1,0 +1,85 @@
+
+#table {
+    position: relative;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+table {
+    background: white;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.5);
+}
+
+thead tr {
+    height: 45px;
+}
+
+.title-td {
+    position: relative;
+}
+
+.title-td span {
+    position: relative;
+    top: 6px;
+}
+/*
+input {
+  border-radius: 0 !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 10px 30px rgba(225, 225, 225, 0.4) !important;
+}
+*/
+.button {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.4);
+    border: none;
+}
+
+.redsn,.red_SN , .remove_SN  ,.red2 , .remove2 , .red1 , .red , .remove , .remove1,.remove_bc ,.red_bc  {
+    background: #e74c3c;
+}
+
+.green ,.greensn , .green1, .green2 , .green_SN, .green_bc {
+    background: #5bc0de;
+}
+
+tr > td {
+    position: relative;
+}
+
+.static {
+    position: static !important;
+}
+
+.alert , .alert_SN ,alert_bc{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #ff9c9c , #ecf0f1);
+    transition: all 400ms ease;
+    transform: translateY(-100%);
+}
+
+.alert.active,.alert_SN.active ,.alert_bc.active {
+    transform: translateY(0);
+}
+.td-top{
+    padding-top: 15px;
+}
+.remove{
+    margin-top: 15px;
+}

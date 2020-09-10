@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Notification" table="notification" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idNotification" type="java.lang.Integer">
+            <column name="id_notification" />
+            <generator class="identity" />
+        </id>
+        <property name="nomNotification" type="string">
+            <column name="nom_notification" length="250" not-null="true" />
+        </property>
+        <property name="idUtilisateur" type="int">
+            <column name="id_utilisateur" not-null="true" />
+        </property>
+        <property name="mode" type="string">
+            <column name="mode" length="250" not-null="true">
+                <comment>one/all</comment>
+            </column>
+        </property>
+        <property name="evenement" type="string">
+            <column name="evenement" length="250" not-null="true" />
+        </property>
+        <property name="dateEvenement" type="string">
+            <column name="date_evenement" length="30" not-null="true" />
+        </property>
+        <property name="rappel" type="string">
+            <column name="rappel" length="30" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

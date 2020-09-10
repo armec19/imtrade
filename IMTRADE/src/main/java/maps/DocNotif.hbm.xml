@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.DocNotif" table="doc_notif" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idDocNotif" type="java.lang.Integer">
+            <column name="id_doc_notif" />
+            <generator class="identity" />
+        </id>
+        <property name="idDocument" type="int">
+            <column name="id_document" not-null="true" />
+        </property>
+        <property name="idNotification" type="int">
+            <column name="id_notification" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

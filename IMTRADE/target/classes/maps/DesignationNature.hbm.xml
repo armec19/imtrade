@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.DesignationNature" table="designation_nature" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idDes" type="java.lang.Integer">
+            <column name="id_des" />
+            <generator class="identity" />
+        </id>
+        <property name="idNature" type="int">
+            <column name="id_nature" not-null="true" />
+        </property>
+        <property name="nomDes" type="string">
+            <column name="nom_des" length="250" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

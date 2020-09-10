@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Destinateur" table="destinateur" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idDestinateur" type="java.lang.Integer">
+            <column name="id_destinateur" />
+            <generator class="identity" />
+        </id>
+        <property name="idStructure" type="int">
+            <column name="id_structure" not-null="true" />
+        </property>
+        <property name="typeDestinateur" type="string">
+            <column name="type_destinateur" length="250" not-null="true" />
+        </property>
+        <property name="nomDestinateur" type="string">
+            <column name="nom_destinateur" length="250" not-null="true" />
+        </property>
+        <property name="phoneDestinateur" type="string">
+            <column name="phone_destinateur" length="250" not-null="true" />
+        </property>
+        <property name="faxDestinateur" type="string">
+            <column name="fax_destinateur" length="250" not-null="true" />
+        </property>
+        <property name="emailDestinateur" type="string">
+            <column name="email_destinateur" length="250" not-null="true" />
+        </property>
+        <property name="adrDestinateur" type="string">
+            <column name="adr_destinateur" length="65535" not-null="true" />
+        </property>
+        <property name="registreCommerce" type="string">
+            <column name="registre_commerce" not-null="true" />
+        </property>
+        <property name="NAgrement" type="string">
+            <column name="N_agrement" not-null="true" />
+        </property>
+        <property name="nif" type="string">
+            <column name="NIF" not-null="true" />
+        </property>
+        <property name="articleI" type="string">
+            <column name="Article_I" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 sept. 2020 14:35:50 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="maps.Cv" table="cv" catalog="imsoluti_idocman" optimistic-lock="version">
+        <id name="idCv" type="java.lang.Integer">
+            <column name="id_cv" />
+            <generator class="identity" />
+        </id>
+        <property name="idPersonne" type="int">
+            <column name="id_personne" not-null="true" />
+        </property>
+        <property name="nomDocument" type="string">
+            <column name="nom_document" length="65535" not-null="true" />
+        </property>
+        <property name="lienDocument" type="string">
+            <column name="lien_document" length="65535" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="isDeleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
